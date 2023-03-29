@@ -1,0 +1,6 @@
+Manually make image:
+	docker run -dit -p 8080:80 --name my-apache-app httpd
+	docker cp ~/3120-cicd-asotirelis/website/. my-apache-app:/usr/local/apache2/htdocs/
+Build with docker file:
+	docker build -t web:0.1 .
+	docker run -dit -p 8080:80 web:0.1
