@@ -4,3 +4,7 @@ Manually make image:
 Build with docker file:
 	docker build -t web:0.1 .
 	docker run -dit -p 8080:80 web:0.1
+
+manual docker image push
+	docker login -u asotirelis
+	docker tag site:0.1 asotirelis/3120-cicd:0.1
