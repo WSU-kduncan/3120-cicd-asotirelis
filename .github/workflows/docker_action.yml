@@ -1,8 +1,7 @@
 name: send image to docker hub
 on:
   push:
-    branches:
-      - `main`
+    branches: [main]
 # creating env instead of hard coding
 env:
   DOCKER_HUB_REPO: asotirelis/3120-cicd
