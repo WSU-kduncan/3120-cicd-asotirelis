@@ -1,3 +1,5 @@
+# This workflow is adapted from pattonsgirl docker-workflow.yml 
+# https://github.com/pattonsgirl/CEG3120/blob/main/Projects/Project4/sample-workflows/docker-workflow.yml
 name: send image to docker hub
 on:
   push:
