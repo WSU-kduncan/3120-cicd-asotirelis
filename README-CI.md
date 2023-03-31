@@ -1,6 +1,10 @@
 # Project 4: CI: 3120-cicd-asotirelis
 ## Part 1 
 ### CI Project Overview
+- What
+- Why
+- tools
+- diagram
 ### How to Run Project Locally
 - Docker Install
 * Go to [docker.com](https://www.docker.com) and select the version for the correct operating system and install.
@@ -35,7 +39,7 @@ pull image: `docker pull asotirelis/3120-cicd:main`
 - Github Workflow
     - On every push to the main branch of 3120-cicd-asotirelis a new image is created created from the contents of the website folder using the httpd base image and pushed to asotirelis/3120-cicd Docker Hub Repo
     
-    what variables in workflow are custom to your project
-        think may need to be changed if someone else is going to use it or you reuse it
+    - Custom variables:
+        - If someone else wanted to build of of this project they would need to change two secrets DOCKER_USERNAME and DOCKER_PASSWORD to their own.
 
         
