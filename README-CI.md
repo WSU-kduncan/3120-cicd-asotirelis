@@ -1,10 +1,11 @@
 # Project 4: CI: 3120-cicd-asotirelis
 ## Part 1 
 ### CI Project Overview
-- What
-- Why
-- tools
-- diagram
+- This project builds a docker image that can run a website. Automated continuous integration features are used so that once a changed is pushed to the main branch of the Github repository an updated docker image is pushed to Docker Hub.
+- This automation is useful because it can cut down on simple but repetitive tasks that would take a long time to do at large scale.
+- git, Github actions (yml workflow file), Github secrets, docker, Dockerfile, base httpd docker image
+- Project Diagram <br>
+<img src="./images/diagram.png"  width="900" height="600">
 ### How to Run Project Locally
 - Docker Install
 * Go to [docker.com](https://www.docker.com) and select the version for the correct operating system and install.
