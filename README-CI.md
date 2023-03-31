@@ -12,22 +12,30 @@ pull image: `docker pull asotirelis/3120-cicd:main`
 
 - How to create Docker Hub Repo
 
+    - Go to [hub.docker.com](https://hub.docker.com/) and create an account
+    - Click `Create Repository` button and give it your repo a name (choose public)
+    - For safer authentication create an authentication token: Account Settings > security > New Access Token
+
 - CLI Docker Authentication
-
-    what credentials would you recommend providing?
-
+    - It is safer to use an authentication token to push to your repo because if it is "compromised" you can delete it from you account
+    - docker login -u username
+    - Use token when prompted for password
+    - To push to this repo: docker push username/repo:tag in our case  `docker push asotirelis/3120-cicd:0.1`
 
 -  GitHub Secrets
-
     - How to set a secret:
-        - 
+        1. Go to repo
+        2. Go to settings
+        3. Click on Secrets and variables > actions
+        4. Click on New Repository Secret
+        5. Name and put in value
+        6. Click add secret
     - project secrets: `DOCKER_USERNAME` and `DOCKER_PASSWORD` where DOCKER_PASSWORD is actually a authentication token
 
-Behavior of GitHub workflow
-
-    what does it do and when
+- Github Workflow
+    - On every push to the main branch of 3120-cicd-asotirelis a new image is created created from the contents of the website folder using the httpd base image and pushed to asotirelis/3120-cicd Docker Hub Repo
+    
     what variables in workflow are custom to your project
         think may need to be changed if someone else is going to use it or you reuse it
 
         
-
