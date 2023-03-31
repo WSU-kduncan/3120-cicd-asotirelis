@@ -6,9 +6,10 @@
 - git, Github actions (yml workflow file), Github secrets, docker, Dockerfile, base httpd docker image
 - Project Diagram <br>
 <img src="./images/diagram.png"  width="900" height="600">
+
 ### How to Run Project Locally
 - Docker Install
-* Go to [docker.com](https://www.docker.com) and select the version for the correct operating system and install.
+- Go to [docker.com](https://www.docker.com) and select the version for the correct operating system and install.
 - Build image from Dockerfile: `docker build -t web:0.1 .` where web:0.1 can be replaced with a different name:tag
 - how to run the container: `docker run -dit -p 8080:80 web:0.1` 
 - how to view the project type `http://localhost:8080` and hit enter
