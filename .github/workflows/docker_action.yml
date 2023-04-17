@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
       - name: docker metadata taging
         id: meta
-        uses: docker/metadata-action@v1
+        uses: docker/metadata-action@v4
         with:
           images: name/app
       - name: Push to Docker Hub
