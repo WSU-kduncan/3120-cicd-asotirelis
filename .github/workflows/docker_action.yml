@@ -16,6 +16,11 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+      - name: docker metadata tagging
+        uses: docker/metadata-action@v4
+        tags: | 
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
@@ -23,3 +28,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ env.DOCKER_HUB_REPO }}
           tag_with_ref: true
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
