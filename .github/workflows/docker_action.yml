@@ -18,9 +18,11 @@ jobs:
         uses: actions/checkout@v2
       - name: docker metadata tagging
         uses: docker/metadata-action@v4
-        tags: | 
-          type=semver,pattern={{version}}
-          type=semver,pattern={{major}}.{{minor}}
+        tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
