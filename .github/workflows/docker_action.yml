@@ -19,6 +19,7 @@ jobs:
       - name: docker metadata tagging
         uses: docker/metadata-action@v4
         with:
+          images: name/app
           tags: |
               type=ref,event=branch
               type=ref,event=pr
