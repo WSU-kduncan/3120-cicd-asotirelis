@@ -21,6 +21,8 @@ jobs:
       - name: docker metadata taging
         id: meta
         uses: docker/metadata-action@v4
+        with:
+          images: name/app
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
