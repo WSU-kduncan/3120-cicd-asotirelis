@@ -1,0 +1,6 @@
+#! /bin/bash
+
+docker stop site
+docker rm site
+sudo docker pull asotirelis/3120-cicd:latest
+sudo docker run -dit -p 8080:80 --name site asotirelis/3120-cicd

@@ -1,7 +1,15 @@
-# Project 5 ReadMe
+# Project 5 | CD
 
+## Part 1
+### Project Overview
+- We are adding on to our existing workflow so that new version images pushed to docker hub will automatically be pulled and run on the ec2 instances running our "site". This all happens just from a push to github.
+- This is important functionality because if we had many instances serving site content it would take a long time to update them with new site content manually. 
+- Tools used: metadata-action@v4 (for semantic versioning), webhook by adnanh
 
-## Part 1 - Change github workflow to push docker hub with semantic versoning
+- Workflow diagram
+<img src="./images/diagram2.png"  width="900" height="600">
+
+## Part Change github workflow to push docker hub with semantic versoning
 - CD Project Overview
 - (what are you doing, why, what tools)
 - How to generate a tag in git / GitHub
